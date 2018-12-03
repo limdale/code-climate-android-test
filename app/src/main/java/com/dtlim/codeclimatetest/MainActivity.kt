@@ -15,7 +15,6 @@ class MainActivity : AppCompatActivity() {
 
         Log.d("test", "test")
         Log.d("test", "test")
-        Log.d("test", "test")
 
         var n = 0
 
@@ -24,9 +23,31 @@ class MainActivity : AppCompatActivity() {
         }
 
         test()
+        test2()
     }
 
     fun test() {
+        var q = 0
+        val bool1 = Random.nextInt(0, 10).rem(2) == 0
+        val bool2 = Random.nextInt(0, 10).rem(2) == 0
+        for (i in 0..5) {
+            if (bool1) {
+                try {
+                    if (bool1 && bool2) {
+                        if ( bool1 == bool2) {
+                            q += 1000
+                        }
+                        q += i
+                        Log.d("TEST", "$q $i")
+                    }
+                } catch (e: Exception) {
+                    Log.d("Exception", "Exception")
+                }
+            }
+        }
+    }
+
+    fun test2() {
         var q = 0
         val bool1 = Random.nextInt(0, 10).rem(2) == 0
         val bool2 = Random.nextInt(0, 10).rem(2) == 0
