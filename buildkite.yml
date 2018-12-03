@@ -1,0 +1,4 @@
+steps:
+    - label: ":hammer: Building Project"
+      command:
+        - "./gradlew clean assembleDebug"
