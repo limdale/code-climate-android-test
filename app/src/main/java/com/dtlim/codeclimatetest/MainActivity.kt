@@ -3,6 +3,7 @@ package com.dtlim.codeclimatetest
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,9 +23,27 @@ class MainActivity : AppCompatActivity() {
             n = n + i
         }
 
+        test()
+    }
+
+    fun test() {
         var q = 0
+        val bool1 = Random.nextInt(0, 10).rem(2) == 0
+        val bool2 = Random.nextInt(0, 10).rem(2) == 0
         for (i in 0..5) {
-            q = q + i
+            if (bool1) {
+                try {
+                    if (bool1 && bool2) {
+                        if ( bool1 == bool2) {
+                            q += 1000
+                        }
+                        q += i
+                        Log.d("TEST", "$q $i")
+                    }
+                } catch (e: Exception) {
+                    Log.d("Exception", "Exception")
+                }
+            }
         }
     }
 }
