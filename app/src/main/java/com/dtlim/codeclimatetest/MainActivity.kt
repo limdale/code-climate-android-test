@@ -15,6 +15,17 @@ class MainActivity : AppCompatActivity() {
         Log.d("test", "test")
         Log.d("test", "test")
         Log.d("test", "test")
+
+        var n = 0
+
+        for (i in 0..5) {
+            n = n + i
+        }
+
+        var q = 0
+        for (i in 0..5) {
+            q = q + i
+        }
     }
 }
 
